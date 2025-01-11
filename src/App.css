@@ -1,0 +1,99 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.App {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    margin: 0;
+}
+
+.Main {
+    padding: 3% 5%;
+}
+
+.App:before {
+    content: '';
+    background: url('./images/img1.jpg') center/cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 47rem;
+    width: 100%;
+    z-index: -1;
+}
+
+input {
+    color: blue;
+    width: 60%;
+    margin-left: 17%;
+    padding: 7px 10px;
+    background-color: rgba(255,255,255,0.5);
+    border: 3px solid white;
+    border-radius: 20px;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+input:focus {
+    outline: none;
+}
+.cityName {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.temperature {
+    font-size: 77px;
+    margin-top: 7px;
+}
+.temperature > b{
+    color: rgb(255, 107, 54);
+}
+
+.weatherDes {
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.feelsLike,
+.humidity,
+.windSpeed {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.Data {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 7px 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    position: relative;
+    top: 321px;
+}
+
+@media (max-width:700px) {
+    .Main {
+        padding: 5% 5%;
+    }
+
+    input {
+        width: 60%;
+    }
+
+    .weatherDes {
+        margin-top: 5px;
+    }
+
+    .Data {
+        color: white;
+    }
+    
+}
