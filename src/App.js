@@ -5,10 +5,11 @@ import './App.css';
 export default function App() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
-  const url = `http://api.weatherapi.com/v1/current.json?q=${location}&key=f6a7000d434842ecad7132756231007`;
+  const url = `https://api.weatherapi.com/v1/current.json?q=${location}&key=f6a7000d434842ecad7132756231007`;
 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
+      event.preventDefault(); // Prevent form submission
       axios.get(url).then((res) => {
         setData(res.data);
         // console.log(res.data);
